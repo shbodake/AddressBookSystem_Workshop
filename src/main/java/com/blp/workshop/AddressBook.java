@@ -3,7 +3,7 @@ package com.blp.workshop;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class AddressBookService {
+public class AddressBook {
     static Scanner scanner = new Scanner(System.in);
     ArrayList<Contacts> contactlist = new ArrayList<>();
 

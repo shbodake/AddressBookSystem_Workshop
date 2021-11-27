@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class AddressBookMain {
 
-    static AddressBookService service = new AddressBookService();
+    static AddressBook service = new AddressBook();
 
     public static void main(String[] args) {
         boolean isExit = false;
