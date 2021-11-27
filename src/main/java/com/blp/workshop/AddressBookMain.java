@@ -8,15 +8,20 @@ public class AddressBookMain {
 
     public static void main(String[] args) {
         boolean isExit = false;
-        while (!isExit) {
+        while (!isExit)
+        {
             Scanner scanner = new Scanner(System.in);
             System.out.println("Enter options " +
                     "\n 1.Add Contact." +
                     "\n 2.Edit Contact." +
-                    "\n 3.Display Contact." +
-                    "\n 4.Exit.");
+                    "\n 3.Delete Contact." +
+                    "\n 4.Display Contact." +
+                    "\n 5.Exit.");
+
             int userInput = scanner.nextInt();
-            switch (userInput) {
+
+            switch (userInput)
+            {
                 case 1:
                     service.addNewContact();
                     break;
@@ -24,9 +29,14 @@ public class AddressBookMain {
                     service.editContact();
                     break;
                 case 3:
+                System.out.println("Enter the name of the person do you wants to delete:");
+                String personName = scanner.next();
+                service.deleteContact(personName);
+                break;
+                case 4:
                     service.displayList();
                     break;
-                case 4:
+                case 5:
                     isExit = true;
                     break;
                 default:
